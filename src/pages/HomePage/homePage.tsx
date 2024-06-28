@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 import api from '../api/api';
 import Product from '../api/typeResponse';
 import Card from '@/components/Card/Card';
@@ -39,6 +40,7 @@ export default function HomePage() {
           </Styled.CardWrapper>
         ))}
       </Styled.CardContainer>
+      <Footer />
     </div>
   );
 }
