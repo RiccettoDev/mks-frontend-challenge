@@ -5,7 +5,8 @@ export const CardContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 10px;
-  padding: 4em;
+  margin-left: 2em;
+  padding: 2em;
 `;
 
 export const CardWrapper = styled.div`

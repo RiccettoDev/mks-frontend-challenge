@@ -1,7 +1,12 @@
+import { useState } from "react";
 import * as Styled from "./styles"
 import { FaShoppingCart } from "react-icons/fa";
 
-export default function Header() {
+interface HeaderProps {
+  onToggleMenu: () => void;
+}
+
+export default function Header({ onToggleMenu }: HeaderProps) {
   return (
     <Styled.Header>
       <div>
@@ -9,11 +14,11 @@ export default function Header() {
         <Styled.Subtitle>sistemas</Styled.Subtitle>
       </div>
       <div>
-        <Styled.ButtonBuy>
+        <Styled.ButtonBuy onClick={onToggleMenu}>
           <FaShoppingCart color="black" size={'28px'} />
           <Styled.TitleNumber>0</Styled.TitleNumber>
         </Styled.ButtonBuy>
       </div>
     </Styled.Header>
-  )
+  );
 }

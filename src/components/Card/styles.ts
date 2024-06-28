@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Main = styled.main`
-  width: 300px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;

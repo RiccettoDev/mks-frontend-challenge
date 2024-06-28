@@ -35,7 +35,7 @@ export const Subtitle = styled.div`
   text-align: left;
 `;
 
-export const ButtonBuy = styled.div`
+export const ButtonBuy = styled.button`
   background-color: white;
   width: 100px;
   height: 50px;
