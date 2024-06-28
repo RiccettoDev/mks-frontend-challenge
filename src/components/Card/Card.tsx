@@ -1,12 +1,16 @@
-import * as Styled from "./styles"
-import Product from "@/pages/api/typeResponse"
+import React from 'react';
+import * as Styled from "./styles";
+import Product from "@/pages/api/typeResponse";
+import { useCart } from '@/context/CartContext/CartContext';
 
 interface CardProps {
   product: Product;
   showLink?: boolean;
 }
 
-const Card: React.FC<CardProps> = ({ product, showLink = true }) => {
+export default function Card({ product }: CardProps) {
+  const { addToCart } = useCart();
+
   return (
     <Styled.Main>
       <Styled.Information>
@@ -25,12 +29,10 @@ const Card: React.FC<CardProps> = ({ product, showLink = true }) => {
         <h4>{product.description}</h4>
       </Styled.Information>
       <div>
-        <Styled.Buy>
+        <Styled.Buy onClick={() => addToCart(product)}>
           COMPRAR
         </Styled.Buy>
       </div>
     </Styled.Main>
   );
 };
-
-export default Card;

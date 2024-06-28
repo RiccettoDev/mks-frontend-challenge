@@ -5,13 +5,14 @@ import Menu from '@/components/Menu/Menu';
 import api from '../api/api';
 import Product from '../api/typeResponse';
 import Card from '@/components/Card/Card';
+import { useCart } from '@/context/CartContext/CartContext';
 
 import * as Styled from './styles'
 
 export default function HomePage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-  const [visible, setVisible] = useState(false);
+  const { isMenuVisible } = useCart();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -34,9 +35,9 @@ export default function HomePage() {
 
   return (
     <div>
-      <Header onToggleMenu={() => setVisible(!visible)} />
-      {visible && (
-        <Menu onClose={() => setVisible(false)} />
+      <Header />
+      {isMenuVisible && (
+        <Menu />
       )}
       <Styled.CardContainer>
         {products.map(product => (

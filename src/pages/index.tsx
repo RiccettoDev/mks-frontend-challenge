@@ -1,6 +1,6 @@
 import Head from "next/head";
-
 import HomePage from "./HomePage/homePage";
+import { CartProvider } from "@/context/CartContext/CartContext";
 
 export default function Home() {
   return (
@@ -11,7 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <HomePage />
+        <CartProvider>
+          <HomePage />
+        </CartProvider>
       </main>
     </>
   );

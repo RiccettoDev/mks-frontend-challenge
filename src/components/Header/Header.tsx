@@ -1,12 +1,11 @@
-import { useState } from "react";
-import * as Styled from "./styles"
+import React from 'react';
+import * as Styled from "./styles";
 import { FaShoppingCart } from "react-icons/fa";
+import { useCart } from '@/context/CartContext/CartContext';
 
-interface HeaderProps {
-  onToggleMenu: () => void;
-}
+export default function Header() {
+  const { cartItems, toggleMenu } = useCart();
 
-export default function Header({ onToggleMenu }: HeaderProps) {
   return (
     <Styled.Header>
       <div>
@@ -14,11 +13,11 @@ export default function Header({ onToggleMenu }: HeaderProps) {
         <Styled.Subtitle>sistemas</Styled.Subtitle>
       </div>
       <div>
-        <Styled.ButtonBuy onClick={onToggleMenu}>
+        <Styled.ButtonBuy onClick={toggleMenu}>
           <FaShoppingCart color="black" size={'28px'} />
-          <Styled.TitleNumber>0</Styled.TitleNumber>
+          <Styled.TitleNumber>{cartItems.length}</Styled.TitleNumber>
         </Styled.ButtonBuy>
       </div>
     </Styled.Header>
   );
-}
+};

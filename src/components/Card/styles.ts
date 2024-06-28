@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Main = styled.main`
-  width: 200px;
+  width: 300px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2em;
 
   > div {
     width: 100%;
@@ -49,7 +49,10 @@ export const SubInformation = styled.section`
   }
 `
 
-export const Buy = styled.div`
+export const Buy = styled.button`
+  background-color: blue;
+  border: none;
+  color: white;
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 600;

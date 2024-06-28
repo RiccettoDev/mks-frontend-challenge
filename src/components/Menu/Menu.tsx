@@ -1,11 +1,11 @@
+import React from 'react';
 import { IoCloseCircle } from "react-icons/io5";
-import * as Styled from './styles'
+import * as Styled from './styles';
+import { useCart } from '@/context/CartContext/CartContext';
 
-interface MenuProps {
-  onClose: () => void;
-}
+export default function Menu() {
+  const { closeMenu } = useCart();
 
-export default function Menu({ onClose }: MenuProps) {
   return (
     <Styled.ContainerMenu>
       <Styled.HeaderMenu>
@@ -17,7 +17,7 @@ export default function Menu({ onClose }: MenuProps) {
             de compras
           </Styled.Title>
         </Styled.HeaderName>
-        <Styled.HeaderClose onClick={onClose}>
+        <Styled.HeaderClose onClick={closeMenu}>
           <IoCloseCircle style={{
             width: '100%',
             height: '100%',
@@ -42,4 +42,4 @@ export default function Menu({ onClose }: MenuProps) {
       </Styled.FooterMenu>
     </Styled.ContainerMenu>
   );
-}
+};
