@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import HomePage from "./homePage";
+import HomePage from "./HomePage/homePage";
 
 export default function Home() {
   return (
