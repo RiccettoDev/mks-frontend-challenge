@@ -1,18 +1,15 @@
-// src/components/Menu/Menu.tsx
 import React from 'react';
 import { IoCloseCircle } from "react-icons/io5";
 import * as Styled from './styles';
 import { useCart } from '@/context/CartContext/CartContext';
 
 export default function Menu() {
-  const { cartItems, closeMenu } = useCart();
+  const { cartItems, closeMenu, removeFromCart } = useCart();
 
-  // Função para calcular o total de forma segura
   const calculateTotal = () => {
     return cartItems
       .reduce((total, item) => {
-        // Converte item.price para número e ignora valores não numéricos
-        const price = parseFloat(item.price as any);
+        const price = parseFloat(item.price as any) * parseFloat(item.quantity as any);
         return total + (isNaN(price) ? 0 : price);
       }, 0)
       .toFixed(2);
@@ -45,8 +42,12 @@ export default function Menu() {
               <Styled.ProductImage src={item.photo} alt={item.name} />
               <Styled.ProductDetails>
                 <Styled.ProductName>{item.name}</Styled.ProductName>
-                <Styled.ProductQuantity>R${item.price}</Styled.ProductQuantity>
+                <Styled.ProductQuantity>Qtd: {item.quantity}x</Styled.ProductQuantity>
+                <Styled.ProductPrice>R${parseInt(item.price) * item.quantity}</Styled.ProductPrice>
               </Styled.ProductDetails>
+              <Styled.RemoveButton onClick={() => removeFromCart(item.id)}>
+                Remover
+              </Styled.RemoveButton>
             </Styled.ProductCard>
           ))
         )}

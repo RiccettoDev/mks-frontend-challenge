@@ -1,15 +1,15 @@
-// styles.ts
 import styled from 'styled-components';
 
 export const ContainerMenu = styled.div`
-  width: 30%;
+  width: 40%;
   height: 100vh;
   background-color: blue;
   position: absolute;
   z-index: 1;
   top: 0;
   right: 0;
-  box-shadow: 0px 0px 15px 5px black; /* Sombra ao redor do menu */
+  box-shadow: 0px 0px 15px 5px black;
+  overflow: auto;
 `;
 
 export const HeaderMenu = styled.div`
@@ -49,7 +49,16 @@ export const ContainerProducts = styled.div`
   flex-direction: column;
   gap: 10px;
   padding: 1em;
-  overflow-y: auto; /* Para scroll se houver muitos itens */
+  overflow-y: auto;
+
+  > p {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32.91px;
+    text-align: left;
+    color: white;
+  }
 `;
 
 export const ProductCard = styled.div`
@@ -60,11 +69,12 @@ export const ProductCard = styled.div`
   border-radius: 8px;
   padding: 1em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
 `;
 
 export const ProductImage = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   object-fit: cover;
   border-radius: 4px;
   margin-right: 10px;
@@ -73,21 +83,38 @@ export const ProductImage = styled.img`
 export const ProductDetails = styled.div`
   flex: 1;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 `;
 
 export const ProductName = styled.span`
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   margin-right: 10px;
 `;
 
 export const ProductQuantity = styled.span`
+  margin-top: 0.5em;
   font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
+`;
+
+export const ProductPrice = styled.span`
+  margin-top: 0.5em;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+`;
+
+export const RemoveButton = styled.button`
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em;
+  cursor: pointer;
 `;
 
 export const ValorMenu = styled.div`
