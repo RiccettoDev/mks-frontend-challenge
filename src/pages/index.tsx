@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>MKS Sistemas</title>
         <meta name="description" content="MKS Company Code Challenge" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/MKS.svg" />
       </Head>
       <main>
         <CartProvider>
