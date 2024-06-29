@@ -7,17 +7,26 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   background-color: blue;
+  padding: 0 65px;
 
   > div {
-    margin-left: 65px;
-    margin-right: 75px;
     display: flex;
     align-items: baseline;
     justify-content: center;
     gap: 10px;
     color: white;
   }
-`
+
+  @media (max-width: 768px) {
+    height: 70px;
+    padding: 0 20px;
+
+    > div {
+      margin: 0;
+      gap: 5px;
+    }
+  }
+`;
 
 export const Title = styled.div`
   font-family: Montserrat;
@@ -25,6 +34,10 @@ export const Title = styled.div`
   font-weight: 600;
   line-height: 19px;
   text-align: left;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 `;
 
 export const Subtitle = styled.div`
@@ -33,6 +46,10 @@ export const Subtitle = styled.div`
   font-weight: 300;
   line-height: 19px;
   text-align: left;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `;
 
 export const ButtonBuy = styled.button`
@@ -45,6 +62,12 @@ export const ButtonBuy = styled.button`
   align-items: center;
   padding: 20px;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 80px;
+    height: 40px;
+    padding: 15px;
+  }
 `;
 
 export const TitleNumber = styled.div`
@@ -54,4 +77,8 @@ export const TitleNumber = styled.div`
   line-height: 19px;
   text-align: left;
   color: black;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;

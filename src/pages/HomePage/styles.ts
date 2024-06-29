@@ -7,6 +7,10 @@ export const CardContainer = styled.div`
   gap: 10px;
   margin-left: 2em;
   padding: 2em;
+
+  @media (max-width: 768px) {
+    padding: 1em;
+  }
 `;
 
 export const CardWrapper = styled.div`

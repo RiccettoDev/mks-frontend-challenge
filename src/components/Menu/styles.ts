@@ -10,6 +10,10 @@ export const ContainerMenu = styled.div`
   right: 0;
   box-shadow: 0px 0px 15px 5px black;
   overflow: auto;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const HeaderMenu = styled.div`
@@ -17,6 +21,10 @@ export const HeaderMenu = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 2em;
+
+  @media (max-width: 768px) {
+    padding: 1em;
+  }
 `;
 
 export const HeaderName = styled.div`
@@ -33,6 +41,11 @@ export const HeaderClose = styled.div`
   background-color: white;
   border-radius: 50%;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 export const Title = styled.div`
@@ -42,6 +55,10 @@ export const Title = styled.div`
   line-height: 32.91px;
   text-align: left;
   color: white;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
 `;
 
 export const ContainerProducts = styled.div`
@@ -59,6 +76,11 @@ export const ContainerProducts = styled.div`
     text-align: left;
     color: white;
   }
+
+  @media (max-width: 768px) {
+    padding: 0.5em;
+    gap: 5px;
+  }
 `;
 
 export const ProductCard = styled.div`
@@ -70,6 +92,11 @@ export const ProductCard = styled.div`
   padding: 1em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    padding: 0.5em;
+    margin-bottom: 5px;
+  }
 `;
 
 export const ProductImage = styled.img`
@@ -78,6 +105,12 @@ export const ProductImage = styled.img`
   object-fit: cover;
   border-radius: 4px;
   margin-right: 10px;
+
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+  }
 `;
 
 export const ProductDetails = styled.div`
@@ -85,6 +118,10 @@ export const ProductDetails = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const ProductName = styled.span`
@@ -92,6 +129,10 @@ export const ProductName = styled.span`
   font-size: 20px;
   font-weight: 600;
   margin-right: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 export const ProductQuantity = styled.span`
@@ -99,6 +140,10 @@ export const ProductQuantity = styled.span`
   font-family: Montserrat;
   font-size: 20px;
   font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const ProductPrice = styled.span`
@@ -106,6 +151,10 @@ export const ProductPrice = styled.span`
   font-family: Montserrat;
   font-size: 20px;
   font-weight: 600;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 export const RemoveButton = styled.button`
@@ -115,6 +164,10 @@ export const RemoveButton = styled.button`
   border-radius: 4px;
   padding: 0.5em;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    padding: 0.25em;
+  }
 `;
 
 export const ValorMenu = styled.div`
@@ -126,6 +179,10 @@ export const ValorMenu = styled.div`
   border-top: 1px solid #ccc;
   position: absolute;
   bottom: 12%;
+
+  @media (max-width: 768px) {
+    padding: 0.5em;
+  }
 `;
 
 export const FooterMenu = styled.div`
@@ -137,9 +194,11 @@ export const FooterMenu = styled.div`
   text-align: center;
   background-color: black;
   color: white;
-  padding: 2em;
-  bottom: 0;
   position: absolute;
-  z-index: 1;
+  bottom: 0;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    padding: 0.5em;
+  }
 `;
