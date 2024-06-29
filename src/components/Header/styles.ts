@@ -44,6 +44,7 @@ export const ButtonBuy = styled.button`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  cursor: pointer;
 `;
 
 export const TitleNumber = styled.div`

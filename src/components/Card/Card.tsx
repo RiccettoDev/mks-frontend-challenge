@@ -11,6 +11,11 @@ interface CardProps {
 export default function Card({ product }: CardProps) {
   const { addToCart } = useCart();
 
+  const productWithQuantity = {
+    ...product,
+    quantity: 1
+  };
+
   return (
     <Styled.Main>
       <Styled.Information>
@@ -29,7 +34,7 @@ export default function Card({ product }: CardProps) {
         <h4>{product.description}</h4>
       </Styled.Information>
       <div>
-        <Styled.Buy onClick={() => addToCart(product)}>
+        <Styled.Buy onClick={() => addToCart(productWithQuantity)}>
           COMPRAR
         </Styled.Buy>
       </div>

@@ -58,5 +58,6 @@ export const Buy = styled.button`
   font-weight: 600;
   line-height: 18px;
   text-align: left;
+  cursor: pointer;
 `
 
