@@ -1,6 +1,6 @@
 Click here to change the language:
 
-[![flag-eua](./src/img/doc/eua.png)](./README.md) [![flag-brasil](./src/img/doc/brasil.png)](./README-pt-br.md)
+[![flag-eua](./src/img/Doc/eua.png)](./README.md) [![flag-brasil](./src/img/Doc/brasil.png)](./README-pt-br.md)
 
 # TripAdventure
 

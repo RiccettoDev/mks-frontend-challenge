@@ -1,6 +1,6 @@
 Clique aqui para alterar o idioma:
 
-[![flag-eua](./src/img/doc/eua.png)](./README.md) [![flag-brasil](./src/img/doc/brasil.png)](./README-pt-br.md)
+[![flag-eua](./src/img/Doc/eua.png)](./README.md) [![flag-brasil](./src/img/Doc/brasil.png)](./README-pt-br.md)
 
 # TripAdventure
 
@@ -12,7 +12,7 @@ O projeto **MKS sistemas** é um layout de site focado em oferecer a experiênci
 
 <br>
 
-![MKS-sistemas](./src/img/doc/mks-sistemas.png)
+![MKS-sistemas](./src/img/Doc/mks-sistemas.png)
 
 <br>
 
