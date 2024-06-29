@@ -12,9 +12,13 @@ interface CartContextType {
   cartItems: Product[];
   addToCart: (product: Product) => void;
   removeFromCart: (productId: number) => void;
+  clearCart: () => void;
   toggleMenu: () => void;
   closeMenu: () => void;
   isMenuVisible: boolean;
+  toggleModal: () => void;
+  closeModal: () => void;
+  isModalVisible: boolean;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -22,6 +26,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export function CartProvider({ children }: { children: ReactNode }) {
   const [cartItems, setCartItems] = useState<Product[]>([]);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const addToCart = (product: Product) => {
     setCartItems(prevItems => {
@@ -53,6 +58,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
     });
   };
 
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   const toggleMenu = () => {
     setIsMenuVisible(prev => !prev);
   };
@@ -61,9 +70,28 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setIsMenuVisible(false);
   };
 
+  const toggleModal = () => {
+    setIsModalVisible(prev => !prev);
+  }
+
+  const closeModal = () => {
+    setIsModalVisible(false);
+  }
+
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, toggleMenu, closeMenu, isMenuVisible }}
+      value={{
+        cartItems,
+        addToCart,
+        removeFromCart,
+        clearCart,
+        toggleMenu,
+        closeMenu,
+        isMenuVisible,
+        toggleModal,
+        closeModal,
+        isModalVisible
+      }}
     >
       {children}
     </CartContext.Provider>

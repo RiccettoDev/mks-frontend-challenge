@@ -4,7 +4,7 @@ import * as Styled from './styles';
 import { useCart } from '@/context/CartContext/CartContext';
 
 export default function Menu() {
-  const { cartItems, closeMenu, removeFromCart } = useCart();
+  const { cartItems, closeMenu, removeFromCart, toggleModal, clearCart } = useCart();
 
   const calculateTotal = () => {
     return cartItems
@@ -13,6 +13,12 @@ export default function Menu() {
         return total + (isNaN(price) ? 0 : price);
       }, 0)
       .toFixed(2);
+  };
+
+  const handleCheckout = () => {
+    clearCart();
+    toggleModal();
+    closeMenu();
   };
 
   return (
@@ -43,7 +49,7 @@ export default function Menu() {
               <Styled.ProductDetails>
                 <Styled.ProductName>{item.name}</Styled.ProductName>
                 <Styled.ProductQuantity>Qtd: {item.quantity}x</Styled.ProductQuantity>
-                <Styled.ProductPrice>R${parseInt(item.price) * item.quantity}</Styled.ProductPrice>
+                <Styled.ProductPrice>R${item.price * item.quantity}</Styled.ProductPrice>
               </Styled.ProductDetails>
               <Styled.RemoveButton onClick={() => removeFromCart(item.id)}>
                 Remover
@@ -60,11 +66,11 @@ export default function Menu() {
           R${calculateTotal()}
         </Styled.Title>
       </Styled.ValorMenu>
-      <Styled.FooterMenu>
+      <Styled.FooterMenu onClick={handleCheckout}> {/* Use handleCheckout no onClick */}
         <Styled.Title>
           Finalizar Compra
         </Styled.Title>
       </Styled.FooterMenu>
     </Styled.ContainerMenu>
   );
-};
+}

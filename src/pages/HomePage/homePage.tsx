@@ -6,13 +6,14 @@ import api from '../api/api';
 import Product from '../api/typeResponse';
 import Card from '@/components/Card/Card';
 import { useCart } from '@/context/CartContext/CartContext';
+import ModalFinish from '@/components/ModalFinish/ModalFinish';
 
-import * as Styled from './styles'
+import * as Styled from './styles';
 
 export default function HomePage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-  const { isMenuVisible } = useCart();
+  const { isMenuVisible, isModalVisible } = useCart();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -36,9 +37,7 @@ export default function HomePage() {
   return (
     <div>
       <Header />
-      {isMenuVisible && (
-        <Menu />
-      )}
+      {isMenuVisible && <Menu />}
       <Styled.CardContainer>
         {products.map(product => (
           <Styled.CardWrapper key={product.id}>
@@ -46,6 +45,7 @@ export default function HomePage() {
           </Styled.CardWrapper>
         ))}
       </Styled.CardContainer>
+      {isModalVisible && <ModalFinish />}
       <Footer />
     </div>
   );
