@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import * as Styled from "./styles";
 import { FaShoppingCart } from "react-icons/fa";
-import { useCart } from '@/context/CartContext/CartContext';
+import { useCart } from "@/context/CartContext/CartContext";
 
 export default function Header() {
   const { cartItems, toggleMenu } = useCart();
@@ -14,7 +14,7 @@ export default function Header() {
       </div>
       <div>
         <Styled.ButtonBuy onClick={toggleMenu}>
-          <FaShoppingCart color="black" size={'28px'} />
+          <FaShoppingCart color="black" size={"28px"} />
           <Styled.TitleNumber>{cartItems.length}</Styled.TitleNumber>
         </Styled.ButtonBuy>
       </div>

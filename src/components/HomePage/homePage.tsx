@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
-import Menu from '@/components/Menu/Menu';
-import api from '../api/api';
-import Product from '../api/typeResponse';
-import Card from '@/components/Card/Card';
-import { useCart } from '@/context/CartContext/CartContext';
-import ModalFinish from '@/components/ModalFinish/ModalFinish';
+import { useState, useEffect } from "react";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import Menu from "@/components/Menu/Menu";
+import api from "../../api/api";
+import Product from "../../api/typeResponse";
+import Card from "@/components/Card/Card";
+import { useCart } from "@/context/CartContext/CartContext";
+import ModalFinish from "@/components/ModalFinish/ModalFinish";
 
-import * as Styled from './styles';
+import * as Styled from "./styles";
 
 export default function HomePage() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -22,7 +22,7 @@ export default function HomePage() {
         setProducts(products);
         setLoading(false);
       } catch (error) {
-        console.error('Erro ao buscar os produtos:', error);
+        console.error("Erro ao buscar os produtos:", error);
         setLoading(false);
       }
     };

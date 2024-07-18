@@ -7,4 +7,4 @@ interface Product {
   quantity: number;
 }
 
-export default Product
+export default Product;

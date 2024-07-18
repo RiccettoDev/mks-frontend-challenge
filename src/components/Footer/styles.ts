@@ -11,4 +11,4 @@ export const Footer = styled.footer`
   font-weight: 400;
   line-height: 14.63px;
   text-align: left;
-`
+`;

@@ -1,5 +1,5 @@
-import * as Styled from './styles';
-import { useCart } from '@/context/CartContext/CartContext';
+import * as Styled from "./styles";
+import { useCart } from "@/context/CartContext/CartContext";
 
 export default function ModalFinish() {
   const { closeModal } = useCart();

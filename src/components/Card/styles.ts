@@ -21,7 +21,7 @@ export const Main = styled.main`
     color: white;
     margin-top: 1em;
   }
-`
+`;
 
 export const Information = styled.section`
   display: flex;
@@ -29,7 +29,7 @@ export const Information = styled.section`
   justify-content: center;
   padding: 1em;
   gap: 2em;
-`
+`;
 
 export const SubInformation = styled.section`
   display: flex;
@@ -47,7 +47,7 @@ export const SubInformation = styled.section`
     padding: .5em;
 
   }
-`
+`;
 
 export const Buy = styled.button`
   background-color: blue;
@@ -59,5 +59,5 @@ export const Buy = styled.button`
   line-height: 18px;
   text-align: left;
   cursor: pointer;
-`
+`;
 

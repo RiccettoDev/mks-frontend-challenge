@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HomePage from "./HomePage/homePage";
+import HomePage from "../components/HomePage/homePage";
 import { CartProvider } from "@/context/CartContext/CartContext";
 
 export default function Home() {

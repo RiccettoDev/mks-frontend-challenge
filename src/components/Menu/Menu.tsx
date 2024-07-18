@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import { IoCloseCircle } from "react-icons/io5";
-import * as Styled from './styles';
-import { useCart } from '@/context/CartContext/CartContext';
+import * as Styled from "./styles";
+import { useCart } from "@/context/CartContext/CartContext";
 
 export default function Menu() {
   const { cartItems, closeMenu, removeFromCart, toggleModal, clearCart } = useCart();
@@ -34,8 +34,8 @@ export default function Menu() {
         </Styled.HeaderName>
         <Styled.HeaderClose onClick={closeMenu}>
           <IoCloseCircle style={{
-            width: '100%',
-            height: '100%',
+            width: "100%",
+            height: "100%",
           }} />
         </Styled.HeaderClose>
       </Styled.HeaderMenu>

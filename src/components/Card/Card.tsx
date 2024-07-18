@@ -1,6 +1,6 @@
 import React from "react";
 import * as Styled from "./styles";
-import Product from "@/pages/api/typeResponse";
+import Product from "@/api/typeResponse";
 import { useCart } from "@/context/CartContext/CartContext";
 
 interface CardProps {
@@ -22,7 +22,7 @@ export default function Card({ product }: CardProps) {
         <img
           src={product.photo}
           alt={product.name}
-          style={{ width: '250px', height: '250px', objectFit: 'cover', borderRadius: '8px' }}
+          style={{ width: "250px", height: "250px", objectFit: "cover", borderRadius: "8px" }}
         />
         <Styled.SubInformation>
           <h2>{product.name}</h2>
