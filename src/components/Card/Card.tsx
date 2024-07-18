@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import * as Styled from "./styles";
 import Product from "@/pages/api/typeResponse";
-import { useCart } from '@/context/CartContext/CartContext';
+import { useCart } from "@/context/CartContext/CartContext";
 
 interface CardProps {
   product: Product;
